@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 //After creating the inner class, have MovieAdapter extend the RecyclerView adapter.
 //RecyclerView adapter is parameterized by a ViewHolder and the one we will pass in here is the one we just defined
@@ -19,7 +20,7 @@ class MovieAdapter(private val context: Context, private val movies:List<Movie>)
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
         //Grab individual components in itemView (image view & 2 TextView) &
-            // populate with correct data in movie
+        // populate with correct data in movie
         private val tvTitle=itemView.findViewById<TextView>(R.id.tvTitle)
         private val tvOverview=itemView.findViewById<TextView>(R.id.tvOverview)
         private val ivPoster=itemView.findViewById<ImageView>(R.id.ivPoster)
@@ -27,7 +28,8 @@ class MovieAdapter(private val context: Context, private val movies:List<Movie>)
         fun bind(movie: Movie){
             tvTitle.text=movie.title
             tvOverview.text=movie.overview
-            //TODO: populate imageview (require the use of another library
+            //populate imageview (require the use of another library)
+            Glide.with(context).load(movie.posterImageUrl).into(ivPoster)
         }
     }
 
@@ -57,3 +59,4 @@ class MovieAdapter(private val context: Context, private val movies:List<Movie>)
 
 
 }
+

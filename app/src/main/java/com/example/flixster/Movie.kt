@@ -16,7 +16,7 @@ class Movie (
     //will just be using the posterImageUrl.
     private val posterPath: String,
     val title: String,
-    val overview: String
+    val overview: String,
     ){
     //Add a value for the poster image's url https://image.tmdb.org/t/p/w342/6bCplVkhowCjTHXWv49UjRPn0eK.jpg)
     //We will change the 6bCplVkhowCjTHXWv49UjRPn0eK.jpg to be what we parsed out from the poster path (? dont understand)

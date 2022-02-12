@@ -39,12 +39,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //For step 5 of creating a RecyclerView
-        rvMovies=findViewById(R.id.rvMovies)
+
         //The reference ot the adapter. It calls the constructor and pass in context & data source
         //The "this" refers to the Main activity (which is an example of context)
         //The "movies" refers to the data source.
-        val movieAdapter= MovieAdapter(this, movies)
+        val movieAdapter = MovieAdapter(this, movies)
+
+        //For step 5 of creating a RecyclerView
+        rvMovies=findViewById(R.id.rvMovies)
+
 
         //Part of step 5 of creating RecyclerView: Bind movieAdapter to be the adapter for this recycler view
         rvMovies.adapter=movieAdapter
@@ -84,9 +87,7 @@ class MainActivity : AppCompatActivity() {
                     movieAdapter.notifyDataSetChanged()
                     //log out the parse movie objects
                     Log.i(TAG, "Movie list $movies")
-                    }
-                //e for error type (I assumed)
-                catch (e: JSONException){
+                    } catch (e: JSONException){
                         Log.e(TAG, "Encountered exception $e")
                     }
 
