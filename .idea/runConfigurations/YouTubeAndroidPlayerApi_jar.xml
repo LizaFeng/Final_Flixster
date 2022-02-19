@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="YouTubeAndroidPlayerApi.jar" type="JarApplication">
+    <option name="JAR_PATH" value="$PROJECT_DIR$/app/libs/YouTubeAndroidPlayerApi.jar" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method v="2" />
+  </configuration>
+</component>
