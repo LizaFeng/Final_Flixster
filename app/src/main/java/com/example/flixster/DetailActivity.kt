@@ -69,7 +69,7 @@ class DetailActivity : YouTubeBaseActivity() {
                 val movieTrailerJson=results.getJSONObject(0)
                 val youtubeKey= movieTrailerJson.getString("key")
                 //Now our goal is to play the youtube video with this trailer
-                //call youtube.initialize and pass in the youtube key
+                //call youtube.initialize and pass in the youtube key instead of the hard coded youtube key
                 //We used android studios auto-complete to create the method for initializeYoutube
                 initializeYoutube(youtubeKey)
                 //notice that we only initialize when we are onSuccess
